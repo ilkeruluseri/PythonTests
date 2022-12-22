@@ -1,0 +1,18 @@
+M = int(input())
+first_input = input().split() #input is given with space in between
+first_input = list(map(int, first_input)) # map turns str to int here
+set1 = set(first_input) 
+
+N = int(input())
+second_input = input().split()
+second_input = list(map(int, second_input))
+set2 = set(second_input)
+
+inters = set1.intersection(set2)
+union = set1.union(set2)
+
+result = union - inters
+result = sorted(result)
+
+for i in result:
+    print(i)
